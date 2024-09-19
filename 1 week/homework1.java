@@ -1,30 +1,26 @@
-
 public class homework1 {
 
     public static void main(String[] args) {
         
-        Book book1 = new Book("Book One", "Author One", 12345, 5);
-        Book book2 = new Book("Book Two", "Author Two", 23456, 3);
+        Book book1 = new Book("The Winds of Winter", "George R. R. Martin", 98765, 7);
+        Book book2 = new Book("Dune", "Frank Herbert", 12345, 4);
 
-       
-        Reader reader1 = new Reader("John Doe", 1001);
-        Reader reader2 = new Reader("Jane Smith", 1002);
+        Reader reader1 = new Reader("Alice Johnson", 2001);
+        Reader reader2 = new Reader("Michael Brown", 2002);
 
-        
+
         Library library = new Library(new Book[10], new Reader[10]);
         library.addBook(book1);
         library.addBook(book2);
 
-        
         library.registerReader(reader1);
         library.registerReader(reader2);
 
-        
-        library.issueBook(0, 1001); 
-        library.issueBook(0, 1002); 
+        // Используем корректные ID читателей
+        library.issueBook(0, 2001); 
+        library.issueBook(0, 2002); 
 
-        
-        library.returnBook(0, 1001); 
+        library.returnBook(0, 2001); 
     }
 }
 
