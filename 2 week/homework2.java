@@ -1,48 +1,62 @@
+import java.util.List;
+
 
 public class homework2 {
     
 }
 
 // SRP
-class Order {
-    private String productName;
-    private int quantity;
+
+class Invoice {
+    private int id;
+    private List<Item> items;
+    private double taxRate;
+
+    public Invoice(int id, List<Item> items, double taxRate) {
+        this.id = id;
+        this.items = items;
+        this.taxRate = taxRate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public double getTaxRate() {
+        return taxRate;
+    }
+}
+
+class InvoiceCalculator {
+    public double calculateTotal(Invoice invoice) {
+        double subTotal = 0;
+        for (Item item : invoice.getItems()) {
+            subTotal += item.getPrice();
+        }
+        return subTotal + (subTotal * invoice.getTaxRate());
+    }
+}
+
+class InvoiceRepository {
+    public void saveToDatabase(Invoice invoice) {
+        // Логика для сохранения счета-фактуры в базу данных
+        System.out.println("Invoice saved to database: " + invoice.getId());
+    }
+}
+
+class Item {
     private double price;
 
-    public Order(String productName, int quantity, double price) {
-        this.productName = productName;
-        this.quantity = quantity;
+    public Item(double price) {
         this.price = price;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public int getQuantity() {
-        return quantity;
     }
 
     public double getPrice() {
         return price;
-    }
-}
-
-class OrderCalculator {
-    public double calculateTotalPrice(Order order) {
-        return order.getQuantity() * order.getPrice() * 0.9; 
-    }
-}
-
-class PaymentProcessor {
-    public void processPayment(Order order, String paymentDetails) {
-        System.out.println("Payment processed using: " + paymentDetails);
-    }
-}
-
-class NotificationService {
-    public void sendConfirmationEmail(String email) {
-        System.out.println("Confirmation email sent to: " + email);
     }
 }
 
