@@ -43,7 +43,7 @@ class InvoiceCalculator {
 
 class InvoiceRepository {
     public void saveToDatabase(Invoice invoice) {
-        // Логика для сохранения счета-фактуры в базу данных
+        
         System.out.println("Invoice saved to database: " + invoice.getId());
     }
 }
