@@ -1,4 +1,4 @@
-public class lab3i {
+public class lab3 {
     
 }
 
