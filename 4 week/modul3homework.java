@@ -86,3 +86,29 @@ class DivideByZero{
 
 // Создание многофункционального класса
 
+class User{
+    String Name;
+    String Email;
+    String Address;
+
+    public void SaveToDatabase(){
+
+    }
+}
+
+// Добавление ненужных настроек или конфигураций
+
+class FileReader{
+    public void ReadFile(String filePath){
+        // Reading with buffer
+    }
+    public void ReadFileWithoutBuffer(String filePath){
+        // Reading without buffer
+    }
+}
+
+// Добавление ненужных методов и функций
+
+interface ReportGenerator{
+    public void GenerateReport();
+}
