@@ -27,7 +27,6 @@ class Logger {
     public void log(String message, LogLevel level) {
         if (level.ordinal() >= logLevel.ordinal()) {
             System.out.println(String.format("[%s] %s", level, message));
-            // Добавьте логику записи в файл logFilePath
         }
     }
 
