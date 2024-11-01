@@ -1,15 +1,11 @@
-public class modul09lab {
+public class modul09homework {
 //     public static void main(String[] args) {
-//         IPaymentProcessor internalProcessor = PaymentProcessorSelector.GetPaymentProcessor("US", "USD");
-//         internalProcessor.ProcessPayment(100.0);
-//         internalProcessor.RefundPayment(50.0);
+//         IPaymentProcessor paypalProcessor = new PayPalPaymentProcessor();
+//         IPaymentProcessor stripeProcessor = new StripePaymentAdapter(new StripePaymentService());
+//         IPaymentProcessor squareProcessor = new SquarePaymentAdapter(new SquarePaymentService());
 
-//         IPaymentProcessor adapterA = PaymentProcessorSelector.GetPaymentProcessor("EU", "EUR");
-//         adapterA.ProcessPayment(200.0);
-//         adapterA.RefundPayment(100.0);
-
-//         IPaymentProcessor adapterB = PaymentProcessorSelector.GetPaymentProcessor("UK", "GBP");
-//         adapterB.ProcessPayment(300.0);
-//         adapterB.RefundPayment(150.0);
+//         paypalProcessor.processPayment(50.0);
+//         stripeProcessor.processPayment(75.0);
+//         squareProcessor.processPayment(100.0);
 //     }
 // }
