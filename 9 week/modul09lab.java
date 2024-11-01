@@ -112,32 +112,32 @@ class CinnamonDecorator extends BeverageDecorator {
     }
 }
 
-// public class modul09lab {
-//     public static void main(String[] args) {
-//         IBeverage beverage = new Coffee();
-//         System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
+public class modul09lab {
+    public static void main(String[] args) {
+        IBeverage beverage = new Coffee();
+        System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
 
-//         beverage = new MilkDecorator(beverage);
-//         System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
+        beverage = new MilkDecorator(beverage);
+        System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
 
-//         beverage = new SugarDecorator(beverage);
-//         System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
+        beverage = new SugarDecorator(beverage);
+        System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
 
-//         beverage = new ChocolateDecorator(beverage);
-//         System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
+        beverage = new ChocolateDecorator(beverage);
+        System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
 
-//         beverage = new VanillaDecorator(beverage);
-//         System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
+        beverage = new VanillaDecorator(beverage);
+        System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() );
 
-//         beverage = new CinnamonDecorator(beverage);
-//         System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() + " ");
+        beverage = new CinnamonDecorator(beverage);
+        System.out.println(beverage.GetDescription() + " : " + beverage.GetCost() + " ");
 
-//         IBeverage simpleBeverage = new Coffee();
-//         simpleBeverage = new VanillaDecorator(simpleBeverage);
-//         simpleBeverage = new CinnamonDecorator(simpleBeverage);
-//         System.out.println(simpleBeverage.GetDescription() + " : " + simpleBeverage.GetCost() );
-//     }
-// }
+        IBeverage simpleBeverage = new Coffee();
+        simpleBeverage = new VanillaDecorator(simpleBeverage);
+        simpleBeverage = new CinnamonDecorator(simpleBeverage);
+        System.out.println(simpleBeverage.GetDescription() + " : " + simpleBeverage.GetCost() );
+    }
+}
 
 
 interface IPaymentProcessor {
@@ -224,18 +224,18 @@ class PaymentProcessorSelector {
     }
 }
 
-public class modul09lab {
-    public static void main(String[] args) {
-        IPaymentProcessor internalProcessor = PaymentProcessorSelector.GetPaymentProcessor("US", "USD");
-        internalProcessor.ProcessPayment(100.0);
-        internalProcessor.RefundPayment(50.0);
+// public class modul09lab {
+//     public static void main(String[] args) {
+//         IPaymentProcessor internalProcessor = PaymentProcessorSelector.GetPaymentProcessor("US", "USD");
+//         internalProcessor.ProcessPayment(100.0);
+//         internalProcessor.RefundPayment(50.0);
 
-        IPaymentProcessor adapterA = PaymentProcessorSelector.GetPaymentProcessor("EU", "EUR");
-        adapterA.ProcessPayment(200.0);
-        adapterA.RefundPayment(100.0);
+//         IPaymentProcessor adapterA = PaymentProcessorSelector.GetPaymentProcessor("EU", "EUR");
+//         adapterA.ProcessPayment(200.0);
+//         adapterA.RefundPayment(100.0);
 
-        IPaymentProcessor adapterB = PaymentProcessorSelector.GetPaymentProcessor("UK", "GBP");
-        adapterB.ProcessPayment(300.0);
-        adapterB.RefundPayment(150.0);
-    }
-}
+//         IPaymentProcessor adapterB = PaymentProcessorSelector.GetPaymentProcessor("UK", "GBP");
+//         adapterB.ProcessPayment(300.0);
+//         adapterB.RefundPayment(150.0);
+//     }
+// }
