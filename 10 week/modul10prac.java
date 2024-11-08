@@ -194,7 +194,6 @@ class Contractor extends Employee {
 
 public class modul10prac {
     public static void main(String[] args) {
-        // Используем фасад для управления гостиницей
         HotelFacade hotelFacade = new HotelFacade();
         hotelFacade.bookRoomWithDiningAndCleaning("Deluxe Room", "Pizza");
         hotelFacade.organizeEventWithRoomsAndEquipment("Conference", "Suite", "Projector");
